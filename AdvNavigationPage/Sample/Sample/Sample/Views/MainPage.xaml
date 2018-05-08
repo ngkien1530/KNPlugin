@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sample.Views.MainPage"
+             xmlns:pages="clr-namespace:Sample.Views"
+             xmlns:controls="clr-namespace:Sample.Controls;assembly=Sample">
+  <MasterDetailPage.Master>
+    <pages:MainPageMaster x:Name="MasterPage" />
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <controls:AdvNavigationPage BarTextColor="Black"
+                                TitleAlignment="Center"
+                                BarBackgroundColor="Red">
+      <x:Arguments>
+        <pages:MainPageDetail />
+      </x:Arguments>
+    </controls:AdvNavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>

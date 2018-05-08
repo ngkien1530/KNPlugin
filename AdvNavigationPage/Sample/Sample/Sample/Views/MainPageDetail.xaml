@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Sample.Views.MainPageDetail"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Detail"
+             x:Name="This">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="icon" />
+    </ContentPage.ToolbarItems>
+    <ScrollView x:Name="MainScrollView"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+        <Grid HorizontalOptions="FillAndExpand"
+              RowSpacing="0"
+              VerticalOptions="StartAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Image x:Name="HeaderImage"
+                   Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand"
+                   Source="background_me.jpg"
+                   VerticalOptions="FillAndExpand" />
+            <StackLayout Grid.Row="1"
+                         HeightRequest="1000"
+                         HorizontalOptions="FillAndExpand"
+                         Spacing="20">
+                <Label Margin="0,80,0,0"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       Text="KNToolkit.AdvNavigationPage"
+                       VerticalOptions="Start" />
+                <StackLayout HorizontalOptions="FillAndExpand"
+                             Orientation="Horizontal">
+                    <Label Text="Is Overlay"/>
+                    <Switch Toggled="Switch_OnToggled"
+                            x:Name="OverlaySwitch"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
